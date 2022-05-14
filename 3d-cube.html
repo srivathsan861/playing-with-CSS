@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cube</title>
+	<style type="text/css">
+		.cube{
+			height: 200px;
+			width: 200px;
+			position: relative;
+			margin: 100px;
+			perspective: 600px;
+			/*transform: translateZ(100px);*/
+			transform-style: preserve-3d;
+			/*transform: rotateX(25deg) rotateY(-25deg);*/
+			/*animation: all 1s ease-in-out infinite;*/
+  		}
+  		/*@keyframes rotate{
+             from{
+             	transform: rotate(0deg);
+             }
+             to{
+             	transform: rotate(360deg);
+             }
+  		}*/
+		.face{
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 20%;
+			left: 20%;
+		}
+		.cube:hover{
+			transform: rotateX(360deg)rotateY(360deg)/*skew(10deg)*/;
+			transition: all 1s ease-in-out;
+
+		}
+		.one{
+			background-color: red;
+			transform: rotateY(0deg) translateZ(100px);
+		}
+		.two{
+			background-color: green;
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.three{
+			background-color: blue;
+			transform: rotateY(180deg) translateZ(100px);
+		}
+		.four{
+			background-color: hotpink;
+			transform: rotateY(-90deg) translateZ(100px);
+		}
+		.five{
+			background-color: darkcyan;
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.six{
+			background-color: orange;
+			transform: rotateX(-90deg) translateZ(100px);
+	</style>
+</head>
+<body>
+	<div class="cube">
+		<div class="face one">
+			
+		</div>
+		<div class="face two">
+			
+		</div>
+		<div class="face three">
+			
+		</div>
+		<div class="face four">
+			
+		</div>
+		<div class="face five">
+			
+		</div>
+		<div class="face six">
+			
+		</div>
+	</div>
+
+</body>
+</html>

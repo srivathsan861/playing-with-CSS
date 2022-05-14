@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Media queries
+	</title>
+	<style type="text/css">
+		#div1{
+	width:  60%;
+	height: 25rem;
+	border: 0.1rem solid black;
+}
+
+@media screen and (max-width: 900px){
+   #div1{
+   	width: 90%;
+   }
+}
+
+@media only screen and max-width: 600px{
+   #div1{
+   	width: 100%;
+   }
+}
+	</style>
+</head>
+<body>
+
+	<div id="div1">
+		A paragraph is a group of words put together to form a group that is usually longer than a sentence. Paragraphs are often made up of several sentences. There are usually between three and eight sentences. Paragraphs can begin with an indentation (about five spaces), or by missing a line out, and then starting again.
+	</div>
+
+</body>
+</html>

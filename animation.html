@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animation</title>
+	 <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<style type="text/css">
+
+#div1{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	background-color: darkcyan;
+}
+
+#div1:hover{
+	/*transition: all 1s ease-in-out 0.5s;*/
+	transition: 1s steps(4,end);
+    /*transform: rotate(120deg);*/
+    transform: translate(200px) scale(1.2,1.2);
+    /*transform: scale(10,10);*/
+  /*  width: 400px;
+    height: 400px;*/
+}
+
+#div2{
+   height: 200px;
+   width: 200px;
+   position: absolute;
+   background-color: red;
+   border-radius: 50%;
+   top: 200px;
+   left: 400px;
+}
+#div2:hover{
+	   animation: bounce 1s linear;
+}
+@keyframes bounce{
+	20%,50%,80%,to{
+		transform: translateY(0);
+	}
+	40%{
+		transform: translateY(-30px);
+
+	}
+	70%{
+		transform: translateY(-15px);
+	}
+	90%{
+		transform: translateY(-4px);
+	}
+}
+
+
+#div3{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 400px;
+	left: 700px;
+	background-color:pink;
+	animation: changeShape 1s /*cubic-bezier(0.0, 0.0, 1.0, 1.0)*/ ease-in-out infinite alternate;
+}
+@keyframes changeShape{
+	from{
+		border-radius: 0;
+	}
+	50%{
+		background-color: black;
+	}
+	to{
+		border-radius: 50%;
+	}
+}
+
+#div4{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 300px;
+	left: 1000px;
+	background-color:purple;
+	animation-name: changeShape,rotate,changeSize;
+	animation-duration: 0.5s,0.5s,0.5s;
+	animation-iteration-count: infinite,infinite,infinite;
+	animation-direction: alternate,alternate,alternate;
+}
+@keyframes changeShape{
+	from{
+		border-radius: 0;
+	}
+	25%{
+		background-color: black;
+	}
+	50%{
+		background-color: orange;
+	}
+	to{
+		border-radius: 50%;
+	}
+}
+@keyframes rotate{
+   from{
+   	transform: rotate(0deg);
+   }
+   from{
+   	transform: rotate(360deg);
+   }
+}
+@keyframes changeSize{
+   from{
+   	width: 100px;
+   	height: 100px;
+   }
+   from{
+   	width: 50px;
+   	height: 50px;
+   }
+}
+
+.div5{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 150px;
+	left: 1000px;
+	background-color:olive;
+	transition: 1s ease-int-out;
+}
+
+}
+	
+</style>
+
+<body>
+
+<div id="div1">
+	
+</div>
+
+<div id="div2">
+	
+</div>
+
+<div id="div3">
+	
+</div>
+
+<div id="div4">
+	
+</div>
+<div class="div5 animate__animated animate__wobble animate__infinite">
+	hello
+</div>
+
+</body>
+</html>
